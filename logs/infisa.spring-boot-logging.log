@@ -1,0 +1,585 @@
+12:31:01.512 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 9472 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+12:31:01.513 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+12:31:01.537 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@477b4cdf: startup date [Mon Aug 06 12:31:01 CST 2018]; root of context hierarchy
+12:31:02.258 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+12:31:02.265 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+12:31:02.270 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:31:02.270 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+12:31:02.272 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+12:31:02.325 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:31:02.325 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 788 ms
+12:31:02.360 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+12:31:02.363 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+12:31:02.363 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+12:31:02.363 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+12:31:02.363 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+12:31:02.544 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+12:31:02.546 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+12:31:02.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+12:31:02.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+12:31:02.550 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+12:31:02.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+12:31:02.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+12:31:02.626 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:31:02.708 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@477b4cdf: startup date [Mon Aug 06 12:31:01 CST 2018]; root of context hierarchy
+12:31:02.729 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:31:02.729 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:31:02.807 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+12:31:02.813 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+12:31:02.813 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+12:31:02.821 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+12:31:02.828 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+12:31:02.880 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+12:31:02.886 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+12:31:02.894 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+12:31:02.896 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 1.621 seconds (JVM running for 2.227)
+12:31:11.090 [http-nio-8769-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+12:31:11.090 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+12:31:11.100 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+12:31:11.111 [http-nio-8769-exec-1] INFO  c.i.b.y.s.controller.TestController - test: run test
+12:31:16.948 [http-nio-8769-exec-3] INFO  c.i.b.y.s.controller.TestController - test: run test
+13:37:38.048 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 1908 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+13:37:38.050 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+13:37:38.080 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7494f96a: startup date [Mon Aug 06 13:37:38 CST 2018]; root of context hierarchy
+13:37:38.835 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+13:37:38.842 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+13:37:38.847 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:37:38.847 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+13:37:38.850 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+13:37:38.899 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:37:38.899 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 819 ms
+13:37:38.935 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+13:37:38.937 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+13:37:38.938 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13:37:38.938 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13:37:38.938 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+13:37:39.155 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+13:37:39.157 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+13:37:39.160 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+13:37:39.160 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+13:37:39.161 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+13:37:39.163 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13:37:39.164 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13:37:39.248 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:37:39.375 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7494f96a: startup date [Mon Aug 06 13:37:38 CST 2018]; root of context hierarchy
+13:37:39.401 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:37:39.401 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13:37:39.481 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+13:37:39.487 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:37:39.487 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+13:37:39.496 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+13:37:39.503 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+13:37:39.557 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+13:37:39.633 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+13:37:39.641 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+13:37:39.644 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 1.815 seconds (JVM running for 2.387)
+13:37:44.352 [http-nio-8769-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:37:44.353 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+13:37:44.369 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+13:37:44.381 [http-nio-8769-exec-1] INFO  c.i.b.y.s.controller.TestController - test: run test
+13:37:44.382 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................
+13:37:45.121 [http-nio-8769-exec-3] INFO  c.i.b.y.s.controller.TestController - test: run test
+13:37:45.122 [http-nio-8769-exec-3] ERROR c.i.b.y.s.controller.TestController - test: error .................
+15:06:50.138 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 4068 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+15:06:50.140 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+15:06:50.163 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38102d01: startup date [Mon Aug 06 15:06:50 CST 2018]; root of context hierarchy
+15:06:50.838 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+15:06:50.845 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+15:06:50.849 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:06:50.850 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+15:06:50.852 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+15:06:50.906 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:06:50.906 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 743 ms
+15:06:50.943 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:06:50.945 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:06:50.945 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:06:50.945 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:06:50.945 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:06:51.135 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+15:06:51.137 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+15:06:51.140 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+15:06:51.140 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+15:06:51.140 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+15:06:51.142 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:06:51.142 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:06:51.218 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:06:51.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38102d01: startup date [Mon Aug 06 15:06:50 CST 2018]; root of context hierarchy
+15:06:51.325 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:06:51.325 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:06:51.404 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:06:51.409 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:06:51.409 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:06:51.417 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:06:51.425 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:06:51.474 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+15:06:51.480 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:06:51.488 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+15:06:51.490 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 2.373 seconds (JVM running for 2.929)
+15:08:52.916 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 5240 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+15:08:52.917 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+15:08:52.937 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ab778a: startup date [Mon Aug 06 15:08:52 CST 2018]; root of context hierarchy
+15:08:53.602 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+15:08:53.609 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+15:08:53.614 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:53.614 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+15:08:53.617 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+15:08:53.670 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:08:53.670 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 733 ms
+15:08:53.706 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:08:53.709 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:08:53.709 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:08:53.709 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:08:53.709 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:08:53.906 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+15:08:53.909 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+15:08:53.912 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+15:08:53.912 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+15:08:53.912 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+15:08:53.914 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:08:53.915 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:08:53.992 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:08:54.088 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ab778a: startup date [Mon Aug 06 15:08:52 CST 2018]; root of context hierarchy
+15:08:54.113 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:08:54.113 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:08:54.189 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:08:54.194 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:08:54.194 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:54.203 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:54.210 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:54.261 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+15:08:54.267 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:08:54.336 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+15:08:54.339 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 2.481 seconds (JVM running for 3.041)
+15:10:10.929 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 11012 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+15:10:10.932 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+15:10:10.968 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e3958e7: startup date [Mon Aug 06 15:10:10 CST 2018]; root of context hierarchy
+15:10:11.778 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+15:10:11.785 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+15:10:11.791 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:10:11.791 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+15:10:11.793 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+15:10:11.845 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:10:11.846 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 877 ms
+15:10:11.883 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:10:11.886 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:10:11.887 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:10:11.887 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:10:11.887 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:10:12.172 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+15:10:12.174 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+15:10:12.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+15:10:12.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+15:10:12.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+15:10:12.180 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:10:12.181 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:10:12.260 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:10:12.349 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e3958e7: startup date [Mon Aug 06 15:10:10 CST 2018]; root of context hierarchy
+15:10:12.372 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:10:12.372 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:10:12.456 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:10:12.464 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:10:12.464 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:10:12.475 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:10:12.484 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:10:12.542 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+15:10:12.605 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:10:12.613 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+15:10:12.615 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 1.908 seconds (JVM running for 2.482)
+15:11:50.664 [http-nio-8769-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:11:50.664 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+15:11:50.678 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+15:11:50.692 [http-nio-8769-exec-1] INFO  c.i.b.y.s.controller.TestController - test: run test
+15:11:50.692 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:11:50 number:0
+15:11:54.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:11:54 number:1
+15:11:58.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:11:58 number:2
+15:12:02.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:02 number:3
+15:12:06.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:06 number:4
+15:12:10.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:10 number:5
+15:12:14.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:14 number:6
+15:12:18.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:18 number:7
+15:12:22.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:22 number:8
+15:12:26.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:26 number:9
+15:12:30.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:30 number:10
+15:12:34.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:34 number:11
+15:12:38.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:38 number:12
+15:12:42.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:42 number:13
+15:12:46.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:46 number:14
+15:12:50.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:50 number:15
+15:12:54.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:12:54 number:16
+15:12:58.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:12:58 number:17
+15:13:02.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:02 number:18
+15:13:06.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:06 number:19
+15:13:10.693 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:10 number:20
+15:13:14.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:14 number:21
+15:13:18.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:18 number:22
+15:13:22.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:22 number:23
+15:13:26.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:26 number:24
+15:13:30.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:30 number:25
+15:13:34.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:34 number:26
+15:13:38.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:38 number:27
+15:13:42.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:42 number:28
+15:13:46.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:46 number:29
+15:13:50.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:50 number:30
+15:13:54.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:13:54 number:31
+15:13:58.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:13:58 number:32
+15:14:02.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:02 number:33
+15:14:06.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:06 number:34
+15:14:10.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:10 number:35
+15:14:14.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:14 number:36
+15:14:18.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:18 number:37
+15:14:22.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:22 number:38
+15:14:26.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:26 number:39
+15:14:30.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:30 number:40
+15:14:34.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:34 number:41
+15:14:38.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:38 number:42
+15:14:42.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:42 number:43
+15:14:46.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:46 number:44
+15:14:50.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:50 number:45
+15:14:54.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:14:54 number:46
+15:14:58.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:14:58 number:47
+15:15:02.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:02 number:48
+15:15:06.694 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:06 number:49
+15:15:10.695 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:10 number:50
+15:15:14.697 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:14 number:51
+15:15:18.697 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:18 number:52
+15:15:22.698 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:22 number:53
+15:15:26.699 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:26 number:54
+15:15:30.699 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:30 number:55
+15:15:34.699 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:34 number:56
+15:15:38.699 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:38 number:57
+15:15:42.699 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:42 number:58
+15:15:46.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:46 number:59
+15:15:50.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:50 number:60
+15:15:54.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:15:54 number:61
+15:15:58.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:15:58 number:62
+15:16:02.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:02 number:63
+15:16:06.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:06 number:64
+15:16:10.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:10 number:65
+15:16:14.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:14 number:66
+15:16:18.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:18 number:67
+15:16:22.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:22 number:68
+15:16:26.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:26 number:69
+15:16:30.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:30 number:70
+15:16:34.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:34 number:71
+15:16:38.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:38 number:72
+15:16:42.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:42 number:73
+15:16:46.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:46 number:74
+15:16:50.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:50 number:75
+15:16:54.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:16:54 number:76
+15:16:58.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:16:58 number:77
+15:17:02.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:02 number:78
+15:17:06.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:06 number:79
+15:17:10.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:10 number:80
+15:17:14.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:14 number:81
+15:17:18.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:18 number:82
+15:17:22.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:22 number:83
+15:17:26.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:26 number:84
+15:17:30.700 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:30 number:85
+15:17:34.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:34 number:86
+15:17:38.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:38 number:87
+15:17:42.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:42 number:88
+15:17:46.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:46 number:89
+15:17:50.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:50 number:90
+15:17:54.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:17:54 number:91
+15:17:58.701 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:17:58 number:92
+15:18:02.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:02 number:93
+15:18:06.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:06 number:94
+15:18:10.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:10 number:95
+15:18:14.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:14 number:96
+15:18:18.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:18 number:97
+15:18:22.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:22 number:98
+15:18:26.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:26 number:99
+15:18:30.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:30 number:100
+15:18:34.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:34 number:101
+15:18:38.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:38 number:102
+15:18:42.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:42 number:103
+15:18:46.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:46 number:104
+15:18:50.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:50 number:105
+15:18:54.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:18:54 number:106
+15:18:58.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:18:58 number:107
+15:19:02.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:02 number:108
+15:19:06.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:06 number:109
+15:19:10.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:10 number:110
+15:19:14.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:14 number:111
+15:19:18.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:18 number:112
+15:19:22.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:22 number:113
+15:19:26.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:26 number:114
+15:19:30.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:30 number:115
+15:19:34.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:34 number:116
+15:19:38.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:38 number:117
+15:19:42.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:42 number:118
+15:19:46.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:46 number:119
+15:19:50.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:50 number:120
+15:19:54.702 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:19:54 number:121
+15:19:58.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:19:58 number:122
+15:20:02.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:02 number:123
+15:20:06.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:06 number:124
+15:20:10.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:10 number:125
+15:20:14.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:14 number:126
+15:20:18.703 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:18 number:127
+15:20:22.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:22 number:128
+15:20:26.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:26 number:129
+15:20:30.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:30 number:130
+15:20:34.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:34 number:131
+15:20:38.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:38 number:132
+15:20:42.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:42 number:133
+15:20:46.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:46 number:134
+15:20:50.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:50 number:135
+15:20:54.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:20:54 number:136
+15:20:58.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:20:58 number:137
+15:21:02.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:02 number:138
+15:21:06.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:06 number:139
+15:21:10.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:10 number:140
+15:21:14.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:14 number:141
+15:21:18.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:18 number:142
+15:21:22.707 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:22 number:143
+15:21:26.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:26 number:144
+15:21:30.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:30 number:145
+15:21:34.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:34 number:146
+15:21:38.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:38 number:147
+15:21:42.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:42 number:148
+15:21:46.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:46 number:149
+15:21:50.708 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:50 number:150
+15:21:54.709 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:21:54 number:151
+15:21:58.709 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:58 number:152
+15:21:58.709 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:21:58 number:154
+15:34:18.141 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 12696 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+15:34:18.143 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+15:34:18.190 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@291b4bf5: startup date [Mon Aug 06 15:34:18 CST 2018]; root of context hierarchy
+15:34:19.004 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+15:34:19.011 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+15:34:19.016 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:34:19.016 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+15:34:19.019 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+15:34:19.070 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:34:19.070 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 880 ms
+15:34:19.107 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:34:19.109 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:34:19.109 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:34:19.109 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:34:19.109 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:34:19.375 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+15:34:19.377 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+15:34:19.381 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+15:34:19.382 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+15:34:19.383 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+15:34:19.386 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+15:34:19.387 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+15:34:19.479 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:34:19.597 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@291b4bf5: startup date [Mon Aug 06 15:34:18 CST 2018]; root of context hierarchy
+15:34:19.633 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:34:19.633 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+15:34:19.731 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:34:19.737 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:34:19.738 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:34:19.748 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:34:19.756 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:34:19.812 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+15:34:19.898 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:34:19.907 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+15:34:19.909 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 2.029 seconds (JVM running for 2.612)
+15:34:50.124 [http-nio-8769-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:34:50.124 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+15:34:50.136 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+15:34:50.148 [http-nio-8769-exec-1] INFO  c.i.b.y.s.controller.TestController - test: run test
+15:34:50.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:34:50 number:0
+15:34:54.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:34:54 number:1
+15:34:58.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:34:58 number:2
+15:35:02.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:02 number:3
+15:35:06.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:06 number:4
+15:35:10.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:10 number:5
+15:35:14.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:14 number:6
+15:35:18.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:18 number:7
+15:35:22.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:22 number:8
+15:35:26.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:26 number:9
+15:35:30.149 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:30 number:10
+15:35:34.150 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:34 number:11
+15:35:38.152 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:38 number:12
+15:35:42.175 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:42 number:13
+15:35:46.175 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:46 number:14
+15:35:50.175 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:50 number:15
+15:35:54.176 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:35:54 number:16
+15:35:58.176 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:35:58 number:17
+15:36:02.176 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:02 number:18
+15:36:06.176 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:06 number:19
+15:36:10.178 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:10 number:20
+15:36:14.178 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:14 number:21
+15:36:18.178 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:18 number:22
+15:36:22.178 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:22 number:23
+15:36:26.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:26 number:24
+15:36:30.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:30 number:25
+15:36:34.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:34 number:26
+15:36:38.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:38 number:27
+15:36:42.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:42 number:28
+15:36:46.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:46 number:29
+15:36:50.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:50 number:30
+15:36:54.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:36:54 number:31
+15:36:58.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:36:58 number:32
+15:37:02.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:02 number:33
+15:37:06.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:06 number:34
+15:37:10.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:10 number:35
+15:37:14.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:14 number:36
+15:37:18.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:18 number:37
+15:37:22.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:22 number:38
+15:37:26.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:26 number:39
+15:37:30.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:30 number:40
+15:37:34.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:34 number:41
+15:37:38.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:38 number:42
+15:37:42.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:42 number:43
+15:37:46.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:46 number:44
+15:37:50.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:50 number:45
+15:37:54.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:37:54 number:46
+15:37:58.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:37:58 number:47
+15:38:02.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:02 number:48
+15:38:06.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:06 number:49
+15:38:10.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:10 number:50
+15:38:14.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:14 number:51
+15:38:18.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:18 number:52
+15:38:22.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:22 number:53
+15:38:26.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:26 number:54
+15:38:30.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:30 number:55
+15:38:34.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:34 number:56
+15:38:38.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:38 number:57
+15:38:42.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:42 number:58
+15:38:46.179 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:46 number:59
+15:38:50.181 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:50 number:60
+15:38:54.181 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:38:54 number:61
+15:38:58.181 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:38:58 number:62
+15:39:02.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:02 number:63
+15:39:06.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:06 number:64
+15:39:10.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:10 number:65
+15:39:14.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:14 number:66
+15:39:18.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:18 number:67
+15:39:22.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:22 number:68
+15:39:26.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:26 number:69
+15:39:30.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:30 number:70
+15:39:34.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:34 number:71
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:72
+15:39:02.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:02 number:63
+15:39:06.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:06 number:64
+15:39:10.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:10 number:65
+15:39:14.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:14 number:66
+15:39:18.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:18 number:67
+15:39:22.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:22 number:68
+15:39:26.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:26 number:69
+15:39:30.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:30 number:70
+15:39:34.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 15:39:34 number:71
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:79
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:7453333
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:222
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:222
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:222
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:555
+15:39:38.182 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 15:39:38 number:66619:00:57.267 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Starting SpringSwagger2Application on WIN-21HHNRDBUAV with PID 4548 (G:\spring-cloud-test\spring-swagger2\target\classes started by Administrator in G:\spring-cloud-test)
+19:00:57.269 [main] INFO  c.i.b.y.s.SpringSwagger2Application - No active profile set, falling back to default profiles: default
+19:00:57.308 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2df3b89c: startup date [Mon Aug 06 19:00:57 CST 2018]; root of context hierarchy
+19:00:58.250 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8769 (http)
+19:00:58.259 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8769"]
+19:00:58.265 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:00:58.265 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+19:00:58.269 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_92\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_92\bin;%JAVA_HOME%\jre\bin;D:\soft\maven\apache-maven-3.5.2\bin;C:\Program Files\Git\bin;D:\soft\solr-7.2.1\solr-7.2.1\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\soft\solr\solr\bin;D:\soft\apache-apollo-1.7.1\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;.]
+19:00:58.330 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:00:58.330 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1022 ms
+19:00:58.373 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+19:00:58.377 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+19:00:58.377 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+19:00:58.377 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+19:00:58.377 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+19:00:58.593 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/test]}" onto public java.lang.Object cn.intellif.bucheng.yin.springswagger2.controller.TestController.test()
+19:00:58.595 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+19:00:58.599 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+19:00:58.599 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+19:00:58.600 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+19:00:58.603 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+19:00:58.603 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+19:00:58.715 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:00:58.833 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2df3b89c: startup date [Mon Aug 06 19:00:57 CST 2018]; root of context hierarchy
+19:00:58.857 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:00:58.857 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+19:00:58.979 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+19:00:58.999 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+19:00:58.999 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+19:00:59.031 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+19:00:59.053 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+19:00:59.143 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8769"]
+19:00:59.221 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+19:00:59.229 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8769 (http) with context path ''
+19:00:59.232 [main] INFO  c.i.b.y.s.SpringSwagger2Application - Started SpringSwagger2Application in 2.24 seconds (JVM running for 2.843)
+19:01:40.398 [http-nio-8769-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+19:01:40.398 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+19:01:40.414 [http-nio-8769-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+19:01:40.429 [http-nio-8769-exec-1] INFO  c.i.b.y.s.controller.TestController - test: run test
+19:01:40.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:01:40 number:0
+19:01:44.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:01:44 number:1
+19:01:48.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:01:48 number:2
+19:01:52.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:01:52 number:3
+19:01:56.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:01:56 number:4
+19:02:00.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:00 number:5
+19:02:04.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:04 number:6
+19:02:08.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:08 number:7
+19:02:12.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:12 number:8
+19:02:16.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:16 number:9
+19:02:20.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:20 number:10
+19:02:24.429 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:24 number:11
+19:02:28.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:28 number:12
+19:02:32.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:32 number:13
+19:02:36.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:36 number:14
+19:02:40.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:40 number:15
+19:02:44.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:44 number:16
+19:02:48.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:48 number:17
+19:02:52.430 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:02:52 number:18
+19:02:56.431 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:02:56 number:19
+19:03:00.431 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:00 number:20
+19:03:04.431 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:04 number:21
+19:03:08.431 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:08 number:22
+19:03:12.437 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:12 number:23
+19:03:16.437 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:16 number:24
+19:03:20.437 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:20 number:25
+19:03:24.437 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:24 number:26
+19:03:28.437 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:28 number:27
+19:03:32.438 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:32 number:28
+19:03:36.438 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:36 number:29
+19:03:40.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:40 number:30
+19:03:44.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:44 number:31
+19:03:48.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:48 number:32
+19:03:52.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:03:52 number:33
+19:03:56.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:03:56 number:34
+19:04:00.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:00 number:35
+19:04:04.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:04 number:36
+19:04:08.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:08 number:37
+19:04:12.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:12 number:38
+19:04:16.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:16 number:39
+19:04:20.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:20 number:40
+19:04:24.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:24 number:41
+19:04:28.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:28 number:42
+19:04:32.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:32 number:43
+19:04:36.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:36 number:44
+19:04:40.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:40 number:45
+19:04:44.440 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:44 number:46
+19:04:48.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:48 number:47
+19:04:52.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:04:52 number:48
+19:04:56.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:04:56 number:49
+19:05:00.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:00 number:50
+19:05:04.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:04 number:51
+19:05:08.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:08 number:52
+19:05:12.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:12 number:53
+19:05:16.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:16 number:54
+19:05:20.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:20 number:55
+19:05:24.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:24 number:56
+19:05:28.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:28 number:57
+19:05:32.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:32 number:58
+19:05:36.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:36 number:59
+19:05:40.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:40 number:60
+19:05:44.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:44 number:61
+19:05:48.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:48 number:62
+19:05:52.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:05:52 number:63
+19:05:56.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:05:56 number:64
+19:06:00.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:06:00 number:65
+19:06:04.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:06:04 number:66
+19:06:08.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:06:08 number:67
+19:06:12.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:06:12 number:68
+19:06:16.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:06:16 number:69
+19:06:20.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:06:20 number:70
+19:06:24.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:06:24 number:71
+19:06:28.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test: error .................2018-08-06 19:06:28 number:72
+19:06:32.441 [http-nio-8769-exec-1] ERROR c.i.b.y.s.controller.TestController - test:info ..........2018-08-06 19:06:32 number:73
