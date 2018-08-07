@@ -20,6 +20,7 @@ public class TestController {
 
     @GetMapping("hi")
     public Object hi(String word){
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>ribbon invoke:"+word);
         return ribbonService.hi(word);
     }
 

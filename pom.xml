@@ -11,7 +11,12 @@
 		<module>spring-provider2</module>
 		<module>spring-ribbon-consumer</module>
 		<module>spring-feign-consumer</module>
+		<module>spring-zuul</module>
+		<module>spring-turbine</module>
+		<module>spring-eureka-client</module>
+		<module>spring-eureka-server</module>
 	</modules>
+
 
 	<groupId>cn.intellif.bucheng.yin</groupId>
 	<artifactId>spring-cloud-test</artifactId>
