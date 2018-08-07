@@ -14,13 +14,13 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("test")
 public class TestController {
     @Autowired
-    private RestTemplate restTemplate;
+    private RibbonService ribbonService;
     @Autowired
     private LoadBalancerClient loadBalancer;
 
     @GetMapping("hi")
     public Object hi(String word){
-        return restTemplate.getForObject("http://spring-provider/test/hi?word="+word,String.class);
+        return ribbonService.hi(word);
     }
 
     @GetMapping("choseProvider")
