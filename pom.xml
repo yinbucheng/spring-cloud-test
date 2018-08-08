@@ -15,6 +15,10 @@
 		<module>spring-turbine</module>
 		<module>spring-eureka-client</module>
 		<module>spring-eureka-server</module>
+		<module>spring-zipkin-provider</module>
+		<module>spring-zipkin-provider2</module>
+		<module>spring-zipkin-server</module>
+		<module>spring-zipkin-getway</module>
 	</modules>
 
 
