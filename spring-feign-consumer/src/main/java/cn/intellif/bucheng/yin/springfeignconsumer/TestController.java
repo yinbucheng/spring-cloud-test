@@ -13,6 +13,7 @@ public class TestController {
 
     @GetMapping("hi")
     public Object hi(String word){
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>LogId:"+WebUtils.getLogId());
         return testService.hi(word);
     }
 

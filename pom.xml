@@ -19,6 +19,7 @@
 		<module>spring-zipkin-provider2</module>
 		<module>spring-zipkin-server</module>
 		<module>spring-zipkin-getway</module>
+		<module>spring-hystrix</module>
 	</modules>
 
 

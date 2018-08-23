@@ -10,6 +10,7 @@ public class TestController {
 
     @GetMapping("/hi")
     public Object hi(String word){
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>LogId:"+WebUtils.getLogId());
         return "hi i come from provider2 : "+word;
     }
 }

@@ -33,7 +33,7 @@ public class MyFallBackProvider implements FallbackProvider {
 
             @Override
             public String getStatusText() throws IOException {
-                return null;
+                return "error";
             }
 
             @Override
@@ -43,13 +43,13 @@ public class MyFallBackProvider implements FallbackProvider {
 
             @Override
             public InputStream getBody() throws IOException {
-                return new ByteArrayInputStream("error, i am the fallback".getBytes());
+                return new ByteArrayInputStream("error from getway".getBytes("utf-8"));
             }
 
             @Override
             public HttpHeaders getHeaders() {
                 HttpHeaders httpHeaders = new HttpHeaders();
-                httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+                httpHeaders.setContentType(MediaType.APPLICATION_JSON_UTF8);
                 return httpHeaders;
             }
         };

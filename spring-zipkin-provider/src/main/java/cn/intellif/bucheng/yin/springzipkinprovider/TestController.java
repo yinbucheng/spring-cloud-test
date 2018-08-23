@@ -17,6 +17,7 @@ public class TestController {
     public Object hi(){
         String content = "i am forezp ";
         content+=restTemplate.getForObject("http://spring-zipkin-provider2/test/hellow",String.class);
+        int i =1/0;
         return content;
     }
 }
