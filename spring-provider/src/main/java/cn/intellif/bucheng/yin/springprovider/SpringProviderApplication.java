@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-//@EnableDiscoverClient2
+@EnableDiscoverClient2
 //@EnableDiscoveryClient
 public class SpringProviderApplication {
 

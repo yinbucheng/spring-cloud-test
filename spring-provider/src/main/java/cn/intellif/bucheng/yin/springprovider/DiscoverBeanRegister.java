@@ -17,7 +17,7 @@ public class DiscoverBeanRegister implements ImportBeanDefinitionRegistrar {
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
-        String type ="ZOOKEEPER";
+        String type ="EUREKA";
         if(type.equals("EUREKA")){
             System.out.println(">>>>>>>>>>>>>>>>>>>>>注册EUREKA");
             registerEureka(beanDefinitionRegistry);
