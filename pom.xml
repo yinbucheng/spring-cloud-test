@@ -20,6 +20,8 @@
 		<module>spring-zipkin-server</module>
 		<module>spring-zipkin-getway</module>
 		<module>spring-hystrix</module>
+		<module>spring-config-client</module>
+		<module>spring-config-server</module>
 	</modules>
 
 
