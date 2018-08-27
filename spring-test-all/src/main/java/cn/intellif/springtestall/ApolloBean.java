@@ -30,7 +30,6 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
         return bean;
     }
 
-
     private void replaceFieldValue(Object bean, Class clazz, String prefix) {
         Field[] fields = clazz.getDeclaredFields();
         if(fields!=null&&fields.length>0){
