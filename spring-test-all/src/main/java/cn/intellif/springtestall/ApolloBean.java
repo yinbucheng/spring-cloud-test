@@ -20,7 +20,7 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
     @Nullable
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-      Class clazz =   bean.getClass();
+      Class clazz =  bean.getClass();
      ConfigurationProperties annotation = (ConfigurationProperties) clazz.getAnnotation(ConfigurationProperties.class);
      if(annotation!=null) {
          String prefix = annotation.prefix();
@@ -29,6 +29,7 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
      }
         return bean;
     }
+
 
     private void replaceFieldValue(Object bean, Class clazz, String prefix) {
         Field[] fields = clazz.getDeclaredFields();
