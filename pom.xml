@@ -22,6 +22,9 @@
 		<module>spring-hystrix</module>
 		<module>spring-config-client</module>
 		<module>spring-config-server</module>
+		<module>spring-test-all</module>
+		<module>spring-netty-client</module>
+		<module>spring-netty-server</module>
 	</modules>
 
 
