@@ -1,4 +1,4 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.apollo;
 
 import java.util.HashMap;
 import java.util.LinkedList;

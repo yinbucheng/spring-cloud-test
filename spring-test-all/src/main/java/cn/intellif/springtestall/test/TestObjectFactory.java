@@ -1,9 +1,7 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.test;
 
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.context.annotation.Primary;
-import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.ObjectFactory;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -12,10 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
-@Primary
-public class TestFactoryBean implements FactoryBean<Test> {
-
+public class TestObjectFactory implements ObjectFactory<Test> {
     static List<Test> datas = new ArrayList<>(4);
     static {
         datas.add(new TestImpl("nice1"));
@@ -23,21 +18,13 @@ public class TestFactoryBean implements FactoryBean<Test> {
         datas.add(new TestImpl("hello3"));
         datas.add(new TestImpl("byte4"));
     }
-
-    @Nullable
     @Override
-    public Test getObject() throws Exception {
+    public Test getObject() throws BeansException {
         return (Test) Proxy.newProxyInstance(TestObjectFactory.class.getClassLoader(), new Class[]{Test.class}, new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 return method.invoke(datas.get(new Random().nextInt(4)),args);
             }
         });
-    }
-
-    @Nullable
-    @Override
-    public Class<?> getObjectType() {
-        return Test.class;
     }
 }

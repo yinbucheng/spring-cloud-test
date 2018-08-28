@@ -1,4 +1,4 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.test;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;

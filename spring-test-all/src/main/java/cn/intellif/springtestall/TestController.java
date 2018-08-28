@@ -1,8 +1,13 @@
 package cn.intellif.springtestall;
 
+import cn.intellif.springtestall.apollo.ApolloCache;
+import cn.intellif.springtestall.apollo.TestConfigProperties;
+import cn.intellif.springtestall.test.TestBean;
+import cn.intellif.springtestall.test.TestBean2;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +15,7 @@ import java.util.Random;
 
 @RestController
 @RequestMapping("/test")
-public class TestController implements InitializingBean{
+public class TestController {
     @Value("${spring.application.name}")
     private String test;
 
@@ -21,31 +26,28 @@ public class TestController implements InitializingBean{
     @Autowired
     private TestBean2 testBean2;
 
+    @Autowired
+    private ServerProperties serverProperties;
+    @Autowired
+    private TestConfigProperties testConfigProperties;
+
+
     @RequestMapping("/test")
     public Object test(){
-        System.out.println(testBean.getValue()+":"+test2+":"+test+":"+test2);
+        System.out.println(testBean.getValue()+":"+test2+":"+test+":"+test2+" :"+serverProperties.getPort()+" "+testConfigProperties.getAddress()+" :"+testConfigProperties.getName());
         return test;
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(true) {
-                    try {
-                        Thread.sleep(10000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    ApolloCache.changeValue("spring.application.name", "test-lalala"+new Random().nextInt(1000));
-                    int port =  8080 + new Random().nextInt(10);
-                    ApolloCache.changeValue("server.port",port);
-                    System.out.println("》》》》》》》》》》》》》》》》》》》》》》当前端口为:"+port);
-                }
-            }
-        });
-        thread.start();
 
+    @RequestMapping("/changeName")
+    public Object changeAppliationName(String value){
+        ApolloCache.changeValue("spring.application.name",value);
+        return "{\"code\":200,\"msg\":\"修改name成功\"}";
+    }
+
+    @RequestMapping("/changePort")
+    public Object changePort(Integer port){
+        ApolloCache.changeValue("server.port",port);
+        return "{\"code\":200,\"msg\":\"修改端口成功\"}";
     }
 }

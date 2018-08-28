@@ -1,4 +1,4 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.test;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

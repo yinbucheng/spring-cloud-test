@@ -1,5 +1,6 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.apollo;
 
+import cn.intellif.springtestall.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
@@ -45,10 +46,7 @@ public class ApolloBeanPostProcessor implements BeanPostProcessor,InitializingBe
                         String data = value.value();
                         String key = getELValue(data);
                         field.setAccessible(true);
-                        ApolloDefination apolloDefination = new ApolloDefination();
-                        apolloDefination.setTarget(bean);
-                        apolloDefination.setField(field);
-                        ApolloCache.register(key, apolloDefination);
+                        registerApolloDefination(bean, field, key);
                     }
                 }
             }
@@ -71,10 +69,12 @@ public class ApolloBeanPostProcessor implements BeanPostProcessor,InitializingBe
                     field.setAccessible(true);
                     try {
                        String key = prefix+"."+endName;
+                        System.out.println("key:"+key);
                        Object value = map.get(key);
                        if(value==null)
                            continue;
                        field.set(bean,value);
+                        registerApolloDefination(bean, field, key);
                     } catch (Exception e) {
                             throw new RuntimeException(e);
                     }
@@ -95,8 +95,16 @@ public class ApolloBeanPostProcessor implements BeanPostProcessor,InitializingBe
         }
     }
 
+    private void registerApolloDefination(Object bean, Field field, String key) {
+        ApolloDefination apolloDefination = new ApolloDefination();
+        apolloDefination.setTarget(bean);
+        apolloDefination.setField(field);
+        ApolloCache.register(key, apolloDefination);
+    }
+
     @Override
     public void afterPropertiesSet() throws Exception {
         map.put("server.servlet.path","/");
+        map.put("server.port",9099);
     }
 }

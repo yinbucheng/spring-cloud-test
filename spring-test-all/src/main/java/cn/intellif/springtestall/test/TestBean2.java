@@ -1,5 +1,6 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.test;
 
+import cn.intellif.springtestall.test.TestBean;
 import org.springframework.stereotype.Component;
 
 @Component

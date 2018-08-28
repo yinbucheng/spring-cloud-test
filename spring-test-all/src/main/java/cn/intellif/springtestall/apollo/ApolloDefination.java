@@ -1,4 +1,4 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.apollo;
 
 import java.lang.reflect.Field;
 

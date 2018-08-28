@@ -1,4 +1,6 @@
-package cn.intellif.springtestall;
+package cn.intellif.springtestall.test;
+
+import cn.intellif.springtestall.test.Test;
 
 public class TestImpl implements Test {
     private String name;
