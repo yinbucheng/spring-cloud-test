@@ -33,12 +33,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<exclusions>
-			<exclusion>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-netflix-eureka-client</artifactId>
-			</exclusion>
-		</exclusions>
+			<!--<exclusions>-->
+			<!--<exclusion>-->
+				<!--<groupId>org.springframework.cloud</groupId>-->
+				<!--<artifactId>spring-cloud-netflix-eureka-client</artifactId>-->
+			<!--</exclusion>-->
+		<!--</exclusions>-->
 		</dependency>
 
 		<dependency>
@@ -56,9 +56,9 @@
 					<artifactId>spring-cloud-zookeeper-discovery</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-starter-zookeeper</artifactId>
-				</exclusion>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-zookeeper</artifactId>
+			</exclusion>
 			</exclusions>
 		</dependency>
 
@@ -110,6 +110,11 @@
 			<version>0.9.1</version>
 		</dependency>
 		<!-- apollo -->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
 
 	</dependencies>
 
