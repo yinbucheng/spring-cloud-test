@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @GetMapping("/hi")
+    @RequestMapping("/hi")
     public Object hi(String word) {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>服务开被调用:"+word);
 //        try {

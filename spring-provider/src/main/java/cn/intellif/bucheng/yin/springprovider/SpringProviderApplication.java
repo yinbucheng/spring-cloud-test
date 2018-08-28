@@ -8,9 +8,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-//@EnableDiscoverClient2
+@EnableDiscoverClient2
 @EnableApolloConfig
-@EnableEurekaClient
+//@EnableEurekaClient
 public class SpringProviderApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringProviderApplication.class, args);
