@@ -2,6 +2,7 @@ package cn.intellif.springtestall;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.lang.Nullable;
@@ -13,9 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class ApolloBean implements BeanPostProcessor,InitializingBean {
+public class ApolloBeanPostProcessor implements BeanPostProcessor,InitializingBean{
+    private Map<String,Object> map = new HashMap<>();
 
-    Map<String,Object> map = new HashMap<>();
 
     @Nullable
     @Override
@@ -25,12 +26,41 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
      if(annotation!=null) {
          String prefix = annotation.prefix();
          //获取当前类字段
-         replaceFieldValue(bean, clazz, prefix);
+         setApolloValue(bean, clazz, prefix);
      }
+     //获取当前类上面是否存在Value注解
+        saveValueApollo(bean, clazz);
         return bean;
     }
 
-    private void replaceFieldValue(Object bean, Class clazz, String prefix) {
+    private void saveValueApollo(Object bean, Class clazz) {
+        Field[] fields =  clazz.getDeclaredFields();
+        if(fields!=null&&fields.length>0){
+            for(Field field:fields) {
+                if (Modifier.isStatic(field.getModifiers()))
+                    continue;
+                if(BeanUtils.isSimpleType(field.getType())) {
+                    Value value = field.getAnnotation(Value.class);
+                    if (value != null) {
+                        String data = value.value();
+                        String key = getELValue(data);
+                        field.setAccessible(true);
+                        ApolloDefination apolloDefination = new ApolloDefination();
+                        apolloDefination.setTarget(bean);
+                        apolloDefination.setField(field);
+                        ApolloCache.register(key, apolloDefination);
+                    }
+                }
+            }
+        }
+    }
+
+
+    private String getELValue(String value){
+        return value.substring(2,value.length()-1);
+    }
+
+    private void setApolloValue(Object bean, Class clazz, String prefix) {
         Field[] fields = clazz.getDeclaredFields();
         if(fields!=null&&fields.length>0){
             for(Field field:fields){
@@ -38,18 +68,15 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
                     continue;
                 if(BeanUtils.isSimpleType(field.getType())) {
                     String endName = field.getName();
-                    String totalName = prefix + "." + endName;
-                    Object temp = map.get(totalName);
-                    if (temp != null) {
-                        field.setAccessible(true);
-                        try {
-                            Object lastValue = field.get(bean);
-                            System.out.println(totalName + " : last value = " + lastValue);
-                            field.set(bean, temp);
-                            System.out.println(totalName + ": current value =" + temp);
-                        } catch (Exception e) {
+                    field.setAccessible(true);
+                    try {
+                       String key = prefix+"."+endName;
+                       Object value = map.get(key);
+                       if(value==null)
+                           continue;
+                       field.set(bean,value);
+                    } catch (Exception e) {
                             throw new RuntimeException(e);
-                        }
                     }
                 }else{
                     try {
@@ -59,7 +86,7 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
                             continue;
                        Class tempClass =  lastValue.getClass();
                        String tempPrefix=prefix+"."+field.getName();
-                       replaceFieldValue(lastValue,tempClass,tempPrefix);
+                        setApolloValue(lastValue,tempClass,tempPrefix);
                     }catch (Exception e){
                         throw new RuntimeException(e);
                     }
@@ -70,8 +97,6 @@ public class ApolloBean implements BeanPostProcessor,InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        map.put("spring.application.name","spring-test2");
-        map.put("server.port",8091);
-        map.put("server.servlet.path","/test");
+        map.put("server.servlet.path","/");
     }
 }
