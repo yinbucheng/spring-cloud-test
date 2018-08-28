@@ -25,6 +25,7 @@
 		<module>spring-test-all</module>
 		<module>spring-netty-client</module>
 		<module>spring-netty-server</module>
+		<module>spring-test-all</module>
 	</modules>
 
 
