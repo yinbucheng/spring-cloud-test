@@ -27,6 +27,7 @@
 		<module>spring-netty-server</module>
 		<module>spring-test-all</module>
 		<module>spring-provider3</module>
+		<module>spring-feign-consumer2</module>
 	</modules>
 
 
