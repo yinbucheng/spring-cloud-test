@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TestBean {
+public class TestBean3 {
 
     @Value("${spring.application.name}")
     private String value;

@@ -6,20 +6,16 @@ import org.springframework.aop.ClassFilter;
 import org.springframework.aop.MethodMatcher;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
-import org.springframework.aop.support.AopUtils;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AOPBeanFactoryAdvisor extends AbstractBeanFactoryPointcutAdvisor {
 
+    //这里添加一个链式调用方法
     public AOPBeanFactoryAdvisor(){
         setAdvice(new MethodInterceptor() {
             @Override
             public Object invoke(MethodInvocation invocation) throws Throwable {
-                Object  target = invocation.getThis();
-                Class clazz = AopUtils.getTargetClass(target);
-                Class tempClass = target.getClass();
-                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>方法invoke 1  targetClass:"+tempClass.getName()+" sourceClass:"+clazz.getName());
                 return invocation.proceed();
             }
         });

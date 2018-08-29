@@ -1,18 +1,17 @@
 package cn.intellif.springtestall.test;
 
-import cn.intellif.springtestall.test.TestBean;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TestBean2 {
 
-    private TestBean testBean;
+    private TestBean3 testBean;
 
-    public TestBean getTestBean() {
+    public TestBean3 getTestBean() {
         return testBean;
     }
 
-    public void setTestBean(TestBean testBean) {
+    public void setTestBean(TestBean3 testBean) {
         this.testBean = testBean;
     }
 }

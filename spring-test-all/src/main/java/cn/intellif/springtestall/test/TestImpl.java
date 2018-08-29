@@ -5,6 +5,10 @@ import cn.intellif.springtestall.test.Test;
 public class TestImpl implements Test {
     private String name;
 
+    public TestImpl(){
+
+    }
+
     public TestImpl(String name){
         this.name=name;
     }
@@ -15,7 +19,7 @@ public class TestImpl implements Test {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
