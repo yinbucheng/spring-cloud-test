@@ -1,5 +1,6 @@
 package cn.intellif.springtestall;
 
+import cn.intellif.springtestall.aoptest.MethodTest;
 import cn.intellif.springtestall.apollo.ApolloCache;
 import cn.intellif.springtestall.apollo.TestConfigProperties;
 import cn.intellif.springtestall.test.TestBean;
@@ -16,26 +17,11 @@ import java.util.Random;
 @RestController
 @RequestMapping("/test")
 public class TestController {
-    @Value("${spring.application.name}")
-    private String test;
-
-    @Value("${spring.application.name}")
-    private String  test2;
-    @Autowired
-    private TestBean testBean;
-    @Autowired
-    private TestBean2 testBean2;
-
-    @Autowired
-    private ServerProperties serverProperties;
-    @Autowired
-    private TestConfigProperties testConfigProperties;
-
 
     @RequestMapping("/test")
+    @MethodTest
     public Object test(){
-        System.out.println(testBean.getValue()+":"+test2+":"+test+":"+test2+" :"+serverProperties.getPort()+" "+testConfigProperties.getAddress()+" :"+testConfigProperties.getName());
-        return test;
+        return "test";
     }
 
 

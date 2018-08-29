@@ -14,7 +14,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+//@Component
 public class ApolloBeanPostProcessor implements BeanPostProcessor,InitializingBean{
     private Map<String,Object> map = new HashMap<>();
 
