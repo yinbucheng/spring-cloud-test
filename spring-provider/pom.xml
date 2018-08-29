@@ -30,65 +30,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<exclusions>
-			<exclusion>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-netflix-eureka-client</artifactId>
-			</exclusion>
-		</exclusions>
-		</dependency>
 
 		<dependency>
 			<groupId>cn.intellif</groupId>
-			<artifactId>spring-eureka2-client</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-zookeeper-discovery</artifactId>
-				</exclusion>
-				<exclusion>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-zookeeper</artifactId>
-			</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zookeeper</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-zookeeper-core</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>cn</groupId>
-			<artifactId>spring-zookeeper2-client</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-zookeeper-core</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>cn.intellif</groupId>
-			<artifactId>spring-zookeeper2-core</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<artifactId>spring-discover-client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -96,20 +42,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
-		<!-- apollo 携程apollo配置中心框架 -->
-		<dependency>
-			<groupId>com.ctrip.framework.apollo</groupId>
-			<artifactId>apollo-client</artifactId>
-			<version>0.9.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ctrip.framework.apollo</groupId>
-			<artifactId>apollo-core</artifactId>
-			<version>0.9.1</version>
-		</dependency>
-		<!-- apollo -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

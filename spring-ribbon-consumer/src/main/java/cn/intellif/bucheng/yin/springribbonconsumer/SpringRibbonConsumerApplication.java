@@ -1,5 +1,6 @@
 package cn.intellif.bucheng.yin.springribbonconsumer;
 
+import cn.intellif.springdiscoverclient.EnableDiscoverClient2;
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +13,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableEurekaClient
+@EnableDiscoverClient2
 @EnableHystrix
 @EnableHystrixDashboard
 @EnableCircuitBreaker

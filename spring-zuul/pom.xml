@@ -26,14 +26,12 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
@@ -49,22 +47,32 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- apollo 携程apollo配置中心框架 -->
-		<dependency>
-			<groupId>com.ctrip.framework.apollo</groupId>
-			<artifactId>apollo-client</artifactId>
-			<version>0.9.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ctrip.framework.apollo</groupId>
-			<artifactId>apollo-core</artifactId>
-			<version>0.9.1</version>
-		</dependency>
-		<!-- apollo -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		</dependency>
+	  <!--<dependency>-->
+		 <!--<groupId>org.springframework.cloud</groupId>-->
+		 <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+	  <!--</dependency>-->
+		<!--&lt;!&ndash; apollo 携程apollo配置中心框架 &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>com.ctrip.framework.apollo</groupId>-->
+			<!--<artifactId>apollo-client</artifactId>-->
+			<!--<version>0.9.1</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>com.ctrip.framework.apollo</groupId>-->
+			<!--<artifactId>apollo-core</artifactId>-->
+			<!--<version>0.9.1</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; apollo &ndash;&gt;-->
+	<!--</dependencies>-->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-zipkin</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>cn.intellif</groupId>
+		<artifactId>spring-discover-client</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 	</dependencies>
 
 	<dependencyManagement>
