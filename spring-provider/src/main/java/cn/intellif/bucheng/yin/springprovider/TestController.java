@@ -10,13 +10,7 @@ public class TestController {
 
     @RequestMapping("/hi")
     public Object hi(String word) {
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>服务开被调用:"+word);
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
+         int a = 1/0;
         return "hi i come from provider : "+word;
     }
 }

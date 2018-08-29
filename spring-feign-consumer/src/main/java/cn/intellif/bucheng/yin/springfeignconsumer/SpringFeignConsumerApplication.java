@@ -11,7 +11,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableApolloConfig
 @EnableDiscoverClient2
-//@EnableEurekaClient
 public class SpringFeignConsumerApplication {
 
 	public static void main(String[] args) {
