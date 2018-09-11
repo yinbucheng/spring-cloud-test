@@ -10,11 +10,11 @@ public class TestController {
 
     @GetMapping("/hi")
     public Object hi(String word){
-        try {
-            Thread.sleep(9000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(9000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return "hi i come from provider2 : "+word;
     }
 }
