@@ -10,7 +10,7 @@ public class TestController {
 
     @RequestMapping("/hi")
     public Object hi(String word) {
-         int a = 1/0;
+//         int a = 1/0;
         return "hi i come from provider : "+word;
     }
 }
