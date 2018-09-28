@@ -8,3 +8,6 @@ eureka.client.registry-fetch-interval-seconds=5
 #eureka客户端ribbon刷新时间
 #默认30s
 ribbon.ServerListRefreshInterval=5000
+
+spring.datasource.schema=classpath:schema.sql
+spring.datasource.initialization-mode=always

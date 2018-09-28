@@ -1,0 +1,11 @@
+package cn.intellif.bucheng.yin.springfeignconsumer.provider;
+
+import cn.intellif.bucheng.yin.springfeignconsumer.failback.Provider3Impl;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(value = "spring-provider3",fallback = Provider3Impl.class)
+public interface IProvider3 {
+    @GetMapping("/book/save")
+    String bookSave();
+}

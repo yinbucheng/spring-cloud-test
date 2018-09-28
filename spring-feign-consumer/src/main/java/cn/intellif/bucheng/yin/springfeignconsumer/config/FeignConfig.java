@@ -1,4 +1,4 @@
-package cn.intellif.bucheng.yin.springfeignconsumer;
+package cn.intellif.bucheng.yin.springfeignconsumer.config;
 
 import feign.Retryer;
 import org.springframework.context.annotation.Bean;

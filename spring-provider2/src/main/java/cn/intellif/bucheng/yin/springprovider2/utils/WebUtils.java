@@ -1,4 +1,4 @@
-package cn.intellif.bucheng.yin.springprovider2;
+package cn.intellif.bucheng.yin.springprovider2.utils;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

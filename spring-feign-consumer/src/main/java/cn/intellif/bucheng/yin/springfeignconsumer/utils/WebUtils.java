@@ -1,4 +1,4 @@
-package cn.intellif.bucheng.yin.springfeignconsumer;
+package cn.intellif.bucheng.yin.springfeignconsumer.utils;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
