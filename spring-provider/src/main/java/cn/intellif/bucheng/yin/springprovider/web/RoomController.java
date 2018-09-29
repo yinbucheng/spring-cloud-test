@@ -16,7 +16,7 @@ public class RoomController {
     public Object save(){
         try {
             RoomEntity entity = new RoomEntity();
-            entity.setName("test");
+            entity.setName("test"+System.currentTimeMillis());
             roomService.save(entity);
         }catch (Exception e){
             throw new RuntimeException(e);

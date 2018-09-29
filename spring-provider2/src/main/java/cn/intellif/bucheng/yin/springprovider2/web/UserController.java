@@ -17,7 +17,7 @@ public class UserController {
     public Object save(){
         try {
             UserEntity userEntity = new UserEntity();
-            userEntity.setName("yinchong");
+            userEntity.setName("yinchong"+System.currentTimeMillis());
             userService.save(userEntity);
         }catch (Exception e){
             throw new RuntimeException(e);

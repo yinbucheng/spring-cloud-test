@@ -15,7 +15,7 @@ public class BookController {
     @RequestMapping("save")
     public Object save(){
         BookEntity bookEntity = new BookEntity();
-        bookEntity.setName("hahaha");
+        bookEntity.setName("hahaha"+System.currentTimeMillis());
         bookService.save(bookEntity);
         return "success";
     }
