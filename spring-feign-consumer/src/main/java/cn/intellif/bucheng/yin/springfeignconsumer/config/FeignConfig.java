@@ -15,7 +15,7 @@ public class FeignConfig {
         /**
          *
          */
-        return new Retryer.Default(3,SECONDS.toMillis(10),2);
+        return new Retryer.Default(3,SECONDS.toMillis(10),1);
     }
 
 }

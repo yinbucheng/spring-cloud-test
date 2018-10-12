@@ -1,6 +1,7 @@
 package cn.intellif.springprovider3;
 
 import cn.intellif.springdiscoverclient.EnableDiscoverClient2;
+import cn.intellif.transaction.intelliftransaction.anotation.EnableIntellifTransaction;
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableDiscoverClient2
 @EnableApolloConfig
+@EnableIntellifTransaction
 @MapperScan(basePackages = "cn.intellif.springprovider3.mapper")
 public class SpringProvider3Application {
 
