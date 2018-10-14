@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 public class ProviderImpl implements IProvider {
     @Override
     public String roomSave() {
-        return "room save fail";
+       throw new RuntimeException("回滚事务");
+    }
+
+    @Override
+    public String roomSave2() {
+        throw new RuntimeException("回滚事务");
     }
 }

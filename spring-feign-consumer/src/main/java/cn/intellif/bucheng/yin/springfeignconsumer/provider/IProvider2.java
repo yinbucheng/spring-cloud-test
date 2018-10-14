@@ -8,4 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IProvider2 {
     @GetMapping("/user/save")
     String userSave();
+
+    @GetMapping("/user/save")
+    String userSave2();
 }

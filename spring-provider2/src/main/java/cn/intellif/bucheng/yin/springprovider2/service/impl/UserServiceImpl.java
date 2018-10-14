@@ -12,10 +12,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Transactional
+
     @Override
     public void save(UserEntity entity) {
-        int i = 1/0;
         userMapper.save(entity);
     }
 }

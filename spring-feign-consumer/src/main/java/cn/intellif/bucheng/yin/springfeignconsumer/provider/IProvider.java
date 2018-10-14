@@ -8,4 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface IProvider {
     @GetMapping("/room/save")
     String roomSave();
+
+    @GetMapping("/room/save2")
+    String roomSave2();
 }

@@ -22,15 +22,33 @@ public class ConsumerController {
     @RequestMapping("save")
     @TxTransaction
     public Object save(){
-        provider.roomSave();
-        provider2.userSave();
+        try {
+            provider.roomSave();
+            provider2.userSave();
 //        int i = 1/0;
-        provider3.bookSave();
-        return "success";
+            provider3.bookSave();
+            return "success";
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     @RequestMapping("/test")
     public Object test(){
         return WebUtils.getRequest().toString();
+    }
+
+
+    @RequestMapping("/save2")
+    public  Object save2(){
+        try {
+            provider.roomSave2();
+            provider2.userSave2();
+//        int i = 1/0;
+            provider3.bookSave2();
+            return "success";
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 }

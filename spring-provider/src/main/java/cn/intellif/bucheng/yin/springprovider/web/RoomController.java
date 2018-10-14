@@ -3,6 +3,7 @@ package cn.intellif.bucheng.yin.springprovider.web;
 import cn.intellif.bucheng.yin.springprovider.entity.RoomEntity;
 import cn.intellif.bucheng.yin.springprovider.service.IRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,19 @@ public class RoomController {
             RoomEntity entity = new RoomEntity();
             entity.setName("test");
             roomService.save(entity);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+        return "success";
+    }
+
+    @RequestMapping("/save2")
+    @Transactional
+    public Object save2(){
+        try{
+           RoomEntity entity = new RoomEntity();
+           entity.setName("yucui");
+           roomService.save(entity);
         }catch (Exception e){
             throw new RuntimeException(e);
         }
