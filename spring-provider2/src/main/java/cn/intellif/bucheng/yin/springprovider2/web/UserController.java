@@ -1,6 +1,7 @@
 package cn.intellif.bucheng.yin.springprovider2.web;
 
 import cn.intellif.bucheng.yin.springprovider2.entity.UserEntity;
+import cn.intellif.bucheng.yin.springprovider2.provider.IProvider3;
 import cn.intellif.bucheng.yin.springprovider2.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +14,8 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
+    @Autowired
+    private IProvider3 provider3;
 
     @RequestMapping("save")
     @Transactional
@@ -34,6 +37,7 @@ public class UserController {
             UserEntity userEntity = new UserEntity();
             userEntity.setName("yucui");
             userService.save(userEntity);
+            provider3.bookSave();
         }catch (Exception e){
             throw new RuntimeException(e);
         }

@@ -1,6 +1,7 @@
 package cn.intellif.bucheng.yin.springprovider.web;
 
 import cn.intellif.bucheng.yin.springprovider.entity.RoomEntity;
+import cn.intellif.bucheng.yin.springprovider.provider.IProvider2;
 import cn.intellif.bucheng.yin.springprovider.service.IRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoomController {
     @Autowired
     private IRoomService roomService;
+    @Autowired
+    private IProvider2 provider2;
 
     @RequestMapping("save")
     public Object save(){
@@ -32,6 +35,7 @@ public class RoomController {
            RoomEntity entity = new RoomEntity();
            entity.setName("yucui");
            roomService.save(entity);
+           provider2.userSave();
         }catch (Exception e){
             throw new RuntimeException(e);
         }
