@@ -40,8 +40,9 @@ public class ConsumerController {
 
 
     @RequestMapping("/save2")
+    @TxTransaction
     public  Object save2(){
-         provider.roomSave();
+         provider.roomSave2();
          return "success";
     }
 }
