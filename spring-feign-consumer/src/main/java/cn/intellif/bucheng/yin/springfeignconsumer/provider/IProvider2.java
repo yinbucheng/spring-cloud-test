@@ -9,6 +9,6 @@ public interface IProvider2 {
     @GetMapping("/user/save")
     String userSave();
 
-    @GetMapping("/user/save")
+    @GetMapping("/user/save2")
     String userSave2();
 }
