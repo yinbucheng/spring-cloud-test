@@ -15,4 +15,9 @@ public class Provider3Impl implements IProvider3 {
     public String bookSave2() {
         throw new RuntimeException("回滚事务");
     }
+
+    @Override
+    public String delete(Long id) {
+        throw new RuntimeException("回滚事务");
+    }
 }

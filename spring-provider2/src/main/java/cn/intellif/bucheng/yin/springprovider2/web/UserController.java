@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -38,15 +39,18 @@ public class UserController {
     @RequestMapping("/save2")
     @Transactional
     public Object save2(){
-        try{
-            logger.info(">>>>>>>>>>>>>>>>>>>>>>>UserController save2 invoke.....");
-            UserEntity userEntity = new UserEntity();
-            userEntity.setName("yucui");
-            userService.save(userEntity);
-            provider3.bookSave();
-        }catch (Exception e){
-            throw new RuntimeException(e);
-        }
+        logger.info(">>>>>>>>>>>>>>>>>>>>>>>UserController save2 invoke.....");
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("yucui");
+        userService.save(userEntity);
+        provider3.bookSave2();
+        return "success";
+    }
+
+    @RequestMapping("delete")
+    public Object delete(@RequestParam("id") Long id){
+        userService.delete(id);
+        provider3.delete(id);
         return "success";
     }
 }

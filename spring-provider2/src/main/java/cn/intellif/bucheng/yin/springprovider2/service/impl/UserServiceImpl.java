@@ -17,4 +17,10 @@ public class UserServiceImpl implements IUserService {
     public void save(UserEntity entity) {
         userMapper.save(entity);
     }
+
+    @Transactional
+    @Override
+    public void delete(Long id) {
+        userMapper.delete(id);
+    }
 }

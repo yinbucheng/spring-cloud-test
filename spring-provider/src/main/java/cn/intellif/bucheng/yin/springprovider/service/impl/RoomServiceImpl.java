@@ -17,4 +17,10 @@ public class RoomServiceImpl implements IRoomService {
     public void save(RoomEntity entity) {
         roomMapper.save(entity);
     }
+
+    @Transactional
+    public void delete(Long id){
+          roomMapper.delete(id);
+    }
+
 }

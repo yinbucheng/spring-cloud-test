@@ -4,4 +4,7 @@
     <insert id="save"  parameterType="cn.intellif.springprovider3.entity.BookEntity">
         INSERT  INTO  yinchong.t_book(name) VALUES (#{name})
     </insert>
+    <delete id="delete" parameterType="long">
+        DELETE FROM yinchong.t_book where id = #{value}
+    </delete>
 </mapper>

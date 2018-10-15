@@ -15,4 +15,9 @@ public class Provider2Impl implements IProvider2 {
     public String userSave2() {
         throw new RuntimeException("回滚开始......");
     }
+
+    @Override
+    public String delete(Long id) {
+        throw new RuntimeException("回滚开始......");
+    }
 }

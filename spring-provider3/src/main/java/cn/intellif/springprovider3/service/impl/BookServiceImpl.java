@@ -18,7 +18,12 @@ public class BookServiceImpl implements IBookService {
     @Transactional
     @Override
     public void save(BookEntity entity) {
-        int i = 1/0;
         bookMapper.save(entity);
+    }
+
+    @Transactional
+    @Override
+    public void delete(Long id) {
+        bookMapper.delete(id);
     }
 }

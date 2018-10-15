@@ -41,4 +41,11 @@ public class RoomController {
            provider2.userSave2();
         return "success";
     }
+
+    @RequestMapping("delete")
+    public Object delete(Long id){
+        roomService.delete(id);
+        provider2.delete(id);
+        return "success";
+    }
 }

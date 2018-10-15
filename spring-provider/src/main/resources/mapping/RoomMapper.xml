@@ -4,4 +4,7 @@
     <insert id="save"  parameterType="cn.intellif.bucheng.yin.springprovider.entity.RoomEntity">
         INSERT  INTO  yinchong.t_room(name) VALUES (#{name})
     </insert>
+    <delete id="delete" parameterType="long">
+        DELETE FROM yinchong.t_room where id = #{value }
+    </delete>
 </mapper>

@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -22,20 +23,24 @@ public class BookController {
         BookEntity bookEntity = new BookEntity();
         bookEntity.setName("hahaha");
         bookService.save(bookEntity);
+        int i = 1/0;
         return "success";
     }
 
     @RequestMapping("/save2")
     @Transactional
     public Object save2(){
-        try{
-            logger.info(">>>>>>>>>>>>>>>>>>>>>>BookController save2 invoke");
-            BookEntity bookEntity = new BookEntity();
-            bookEntity.setName("yucui");
-            bookService.save(bookEntity);
-        }catch (Exception e){
-            throw new RuntimeException(e);
-        }
+        logger.info(">>>>>>>>>>>>>>>>>>>>>>BookController save2 invoke");
+        BookEntity bookEntity = new BookEntity();
+        bookEntity.setName("yucui");
+        bookService.save(bookEntity);
+        return "success";
+    }
+
+    @RequestMapping("/delete")
+    public Object delete(@RequestParam("id") Long id){
+        bookService.delete(id);
+        int i = 1/0;
         return "success";
     }
 }

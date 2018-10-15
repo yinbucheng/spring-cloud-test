@@ -45,4 +45,11 @@ public class ConsumerController {
          provider.roomSave2();
          return "success";
     }
+
+    @RequestMapping("/delete")
+    @TxTransaction
+    public Object delete(Long id){
+      provider.delete(id);
+      return "success";
+    }
 }
