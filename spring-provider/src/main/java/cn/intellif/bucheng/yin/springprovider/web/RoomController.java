@@ -31,6 +31,16 @@ public class RoomController {
         return "success";
     }
 
+    @RequestMapping("/save3")
+    @Transactional
+    public Object save3(){
+        RoomEntity entity = new RoomEntity();
+        entity.setName("yinchong");
+        roomService.save(entity);
+        int i = 1/0;
+        return "success";
+    }
+
     @RequestMapping("/save2")
     @Transactional
     public Object save2(){
@@ -41,6 +51,7 @@ public class RoomController {
            provider2.userSave2();
         return "success";
     }
+
 
     @RequestMapping("delete")
     public Object delete(Long id){
