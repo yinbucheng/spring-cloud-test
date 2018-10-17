@@ -3,6 +3,8 @@ package cn.intellif.bucheng.yin.springfeignconsumer.web;
 import cn.intellif.bucheng.yin.springfeignconsumer.provider.IProvider;
 import cn.intellif.bucheng.yin.springfeignconsumer.provider.IProvider2;
 import cn.intellif.bucheng.yin.springfeignconsumer.provider.IProvider3;
+import cn.intellif.bucheng.yin.springfeignconsumer.utils.WebUtils;
+import cn.intellif.transaction.intelliftransaction.anotation.TxTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,10 +20,36 @@ public class ConsumerController {
     private IProvider3 provider3;
 
     @RequestMapping("save")
+    @TxTransaction
     public Object save(){
-        provider.roomSave();
-        provider2.userSave();
-        provider3.bookSave();
-        return "success";
+        try {
+            provider.roomSave();
+            provider2.userSave();
+//        int i = 1/0;
+            provider3.bookSave();
+            return "success";
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    @RequestMapping("/test")
+    public Object test(){
+        return WebUtils.getRequest().toString();
+    }
+
+
+    @RequestMapping("/save2")
+    @TxTransaction
+    public  Object save2(){
+         provider.roomSave2();
+         return "success";
+    }
+
+    @RequestMapping("/delete")
+    @TxTransaction
+    public Object delete(Long id){
+      provider.delete(id);
+      return "success";
     }
 }

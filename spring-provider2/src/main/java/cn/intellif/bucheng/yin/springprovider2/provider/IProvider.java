@@ -1,6 +1,7 @@
-package cn.intellif.bucheng.yin.springfeignconsumer.provider;
+package cn.intellif.bucheng.yin.springprovider2.provider;
 
-import cn.intellif.bucheng.yin.springfeignconsumer.failback.ProviderImpl;
+
+import cn.intellif.bucheng.yin.springprovider2.failback.ProviderImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

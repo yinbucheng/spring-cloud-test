@@ -11,6 +11,7 @@ public abstract class WebUtils {
     private static ServletRequestAttributes getAttribute(){
         return (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
     }
+
     
     public static HttpServletRequest getRequest(){
         return getAttribute().getRequest();

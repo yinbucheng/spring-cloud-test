@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-@Configuration
+//@Configuration
 public class FeignConfig {
 
 
@@ -15,7 +15,7 @@ public class FeignConfig {
         /**
          *
          */
-        return new Retryer.Default(3,SECONDS.toMillis(10),2);
+        return new Retryer.Default(3,SECONDS.toMillis(10),1);
     }
 
 }

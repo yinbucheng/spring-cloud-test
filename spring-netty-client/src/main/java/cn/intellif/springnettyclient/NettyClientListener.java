@@ -1,5 +1,8 @@
 package cn.intellif.springnettyclient;
 
+import cn.intellif.springnettyclient.handler.Msg2ByteHandler;
+import cn.intellif.springnettyclient.handler.out.HandlerMsg2OutHandler;
+import cn.intellif.springnettyclient.handler.out.HandlerMsg3OutHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

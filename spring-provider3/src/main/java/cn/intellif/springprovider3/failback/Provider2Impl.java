@@ -1,6 +1,7 @@
-package cn.intellif.bucheng.yin.springfeignconsumer.failback;
+package cn.intellif.springprovider3.failback;
 
-import cn.intellif.bucheng.yin.springfeignconsumer.provider.IProvider2;
+
+import cn.intellif.springprovider3.provider.IProvider2;
 import org.springframework.stereotype.Component;
 
 @Component

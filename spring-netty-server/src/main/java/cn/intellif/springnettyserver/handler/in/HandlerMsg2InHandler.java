@@ -1,4 +1,4 @@
-package cn.intellif.springnettyclient;
+package cn.intellif.springnettyserver.handler.in;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

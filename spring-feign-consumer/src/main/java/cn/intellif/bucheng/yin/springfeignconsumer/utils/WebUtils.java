@@ -4,6 +4,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 public abstract class WebUtils {
@@ -14,6 +15,10 @@ public abstract class WebUtils {
 
     public static HttpServletRequest getRequest(){
         return getAttribute().getRequest();
+    }
+
+    public static HttpServletResponse getResponse(){
+        return getAttribute().getResponse();
     }
 
     public static String getLogId(){
