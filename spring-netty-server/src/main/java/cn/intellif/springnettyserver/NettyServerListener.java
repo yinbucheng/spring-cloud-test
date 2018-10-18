@@ -5,6 +5,8 @@ import cn.intellif.springnettyserver.handler.Msg2ByteHandler;
 import cn.intellif.springnettyserver.handler.in.HandlerMsg2InHandler;
 import cn.intellif.springnettyserver.handler.in.HandlerMsg3InHandler;
 import cn.intellif.springnettyserver.handler.in.StringLineInHandler;
+import cn.intellif.springnettyserver.handler.out.HandlerMsg2OutHandler;
+import cn.intellif.springnettyserver.handler.out.HandlerMsg3OutHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -47,17 +49,17 @@ public class NettyServerListener implements InitializingBean{
                         @Override
                         protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
                             ChannelPipeline pipeline = nioSocketChannel.pipeline();
-//                            pipeline.addLast(new Byte2MessageHandler());
-//                            pipeline.addLast(new HandlerMsg2InHandler());
-//                            pipeline.addLast(new HandlerMsg3InHandler());
-//                            pipeline.addLast(new Msg2ByteHandler());
-//                            pipeline.addLast(new HandlerMsg2InHandler());
-//                            pipeline.addLast(new HandlerMsg3InHandler());
-                            pipeline.addLast(new StringEncoder());
-                            pipeline.addLast(new LineEncoder());
-                            pipeline.addLast(new LineBasedFrameDecoder(1024));
-                            pipeline.addLast(new StringDecoder());
-                            pipeline.addLast(new StringLineInHandler());
+                            pipeline.addLast(new Byte2MessageHandler());
+                            pipeline.addLast(new HandlerMsg2InHandler());
+                            pipeline.addLast(new HandlerMsg3InHandler());
+                            pipeline.addFirst(new HandlerMsg2OutHandler());
+                            pipeline.addFirst(new HandlerMsg3OutHandler());
+                            pipeline.addFirst(new Msg2ByteHandler());
+//                            pipeline.addLast(new StringEncoder());
+//                            pipeline.addLast(new LineEncoder());
+//                            pipeline.addLast(new LineBasedFrameDecoder(1024));
+//                            pipeline.addLast(new StringDecoder());
+//                            pipeline.addLast(new StringLineInHandler());
 
                         }
                     });

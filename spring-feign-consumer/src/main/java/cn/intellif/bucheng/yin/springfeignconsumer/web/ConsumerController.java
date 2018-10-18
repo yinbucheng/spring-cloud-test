@@ -6,6 +6,7 @@ import cn.intellif.bucheng.yin.springfeignconsumer.provider.IProvider3;
 import cn.intellif.bucheng.yin.springfeignconsumer.utils.WebUtils;
 import cn.intellif.transaction.intelliftransaction.anotation.TxTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,11 +22,11 @@ public class ConsumerController {
 
     @RequestMapping("save")
     @TxTransaction
+    @Transactional
     public Object save(){
         try {
             provider.roomSave();
             provider2.userSave();
-//        int i = 1/0;
             provider3.bookSave();
             return "success";
         }catch (Exception e){
@@ -41,6 +42,7 @@ public class ConsumerController {
 
     @RequestMapping("/save2")
     @TxTransaction
+    @Transactional
     public  Object save2(){
          provider.roomSave2();
          return "success";

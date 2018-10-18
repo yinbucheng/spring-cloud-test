@@ -33,6 +33,7 @@ public class BookController {
         logger.info(">>>>>>>>>>>>>>>>>>>>>>BookController save2 invoke");
         BookEntity bookEntity = new BookEntity();
         bookEntity.setName("yucui");
+        int i =1/0;
         bookService.save(bookEntity);
         return "success";
     }

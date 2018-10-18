@@ -9,6 +9,8 @@ public class HandlerMsg3InHandler extends ChannelInboundHandlerAdapter {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>HandlerMsg3In "+msg);
         // 通知执行下一个InboundHandler
         ctx.fireChannelRead(msg);
+        Thread.sleep(5000);
+        ctx.writeAndFlush("ha \n");
     }
 
 

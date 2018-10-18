@@ -8,6 +8,6 @@ public class HandlerMsg2InHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>HandlerMsage2In....."+msg);
         // 通知执行下一个InboundHandler
-        ctx.fireChannelRead("nice \n");
+        ctx.fireChannelRead(msg);
     }
 }
