@@ -1,6 +1,10 @@
 package cn.intellif.springnettyclient;
 
+import cn.intellif.springnettyclient.handler.Byte2MessageHandler;
 import cn.intellif.springnettyclient.handler.Msg2ByteHandler;
+import cn.intellif.springnettyclient.handler.in.HandlerMsg2InHandler;
+import cn.intellif.springnettyclient.handler.in.HandlerMsg3InHandler;
+import cn.intellif.springnettyclient.handler.in.StringLineInHandler;
 import cn.intellif.springnettyclient.handler.out.HandlerMsg2OutHandler;
 import cn.intellif.springnettyclient.handler.out.HandlerMsg3OutHandler;
 import io.netty.bootstrap.Bootstrap;
@@ -10,6 +14,10 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.LineEncoder;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,9 +40,19 @@ public class NettyClientListener  implements InitializingBean{
                         @Override
                         protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
                             ChannelPipeline pipeline = nioSocketChannel.pipeline();
-                            pipeline.addLast(new Msg2ByteHandler());
-                            pipeline.addLast(new HandlerMsg2OutHandler());
-                            pipeline.addLast(new HandlerMsg3OutHandler());
+//                            pipeline.addLast(new Byte2MessageHandler());
+//                            pipeline.addLast(new Msg2ByteHandler());
+//                            pipeline.addLast(new HandlerMsg2InHandler());
+//                            pipeline.addLast(new HandlerMsg3InHandler());
+//                            pipeline.addLast(new HandlerMsg2OutHandler());
+//                            pipeline.addLast(new HandlerMsg3OutHandler());
+                            pipeline.addLast(new StringEncoder());
+                            pipeline.addLast(new LineEncoder());
+                            pipeline.addLast(new LineBasedFrameDecoder(1024));
+                            pipeline.addLast(new StringDecoder());
+                            pipeline.addLast(new StringLineInHandler());
+
+
                         }
                     });
             System.out.println(".....................客户端已经连接上来了......"+config.getIp()+"  "+config.getPort());

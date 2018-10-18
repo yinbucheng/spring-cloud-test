@@ -12,13 +12,13 @@ public class HandlerMsg2OutHandler extends ChannelOutboundHandlerAdapter {
         super.write(ctx, msg, promise);
     }
 
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush("hello word \n good hahah \n");
-        Thread.sleep(100);
-        ctx.writeAndFlush("this is test,");
-        Thread.sleep(3000);
-        ctx.writeAndFlush(",this content is big hahahha,");
-        ctx.writeAndFlush(" test for message end \n");
-    }
+//    @Override
+//    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+//        ctx.writeAndFlush("hello word \n good hahah \n");
+//        Thread.sleep(100);
+//        ctx.writeAndFlush("this is test,");
+//        Thread.sleep(3000);
+//        ctx.writeAndFlush(",this content is big hahahha,");
+//        ctx.writeAndFlush(" test for message end \n");
+//    }
 }

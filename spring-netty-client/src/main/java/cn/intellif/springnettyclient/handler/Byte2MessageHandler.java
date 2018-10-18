@@ -7,7 +7,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ByteMessageHandler extends ByteToMessageDecoder {
+public class Byte2MessageHandler extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, List<Object> list) throws Exception {
@@ -38,4 +38,6 @@ public class ByteMessageHandler extends ByteToMessageDecoder {
             byteBuf.resetReaderIndex();
         }
     }
+
+
 }
