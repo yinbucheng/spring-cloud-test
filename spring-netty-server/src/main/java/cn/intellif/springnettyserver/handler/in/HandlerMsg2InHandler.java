@@ -10,4 +10,6 @@ public class HandlerMsg2InHandler extends ChannelInboundHandlerAdapter {
         // 通知执行下一个InboundHandler
         ctx.fireChannelRead(msg);
     }
+
+
 }

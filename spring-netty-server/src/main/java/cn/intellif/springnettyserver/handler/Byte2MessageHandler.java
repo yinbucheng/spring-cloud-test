@@ -7,7 +7,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ByteMessageHandler extends ByteToMessageDecoder {
+public class Byte2MessageHandler extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, List<Object> list) throws Exception {
@@ -39,5 +39,25 @@ public class ByteMessageHandler extends ByteToMessageDecoder {
             System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>发现未完整的包.....");
             byteBuf.resetReaderIndex();
         }
+    }
+
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>ChannelInactive");
+        ctx.writeAndFlush("ni hao \n");
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>ChannelActive ");
+        ctx.writeAndFlush("ni hao \n");
+    }
+
+
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("出现异常："+cause);
+        super.exceptionCaught(ctx, cause);
     }
 }
