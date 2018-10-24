@@ -8,20 +8,17 @@ public class StringLineInHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("recive msg from client:"+msg);
-        Thread.sleep(1000);
-        ctx.writeAndFlush("hello , i am service");
+        Thread.sleep(Integer.MAX_VALUE);
     }
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-        super.channelRegistered(ctx);
-        System.out.println("register");
+        System.out.println(".....................channelRegistered");
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        super.channelActive(ctx);
-        System.out.println("active");
-        ctx.writeAndFlush("nice to me you");
+        System.out.println("...........客户端连接进来了 ");
+//        ctx.writeAndFlush("哈哈哈哈....");
     }
 }
