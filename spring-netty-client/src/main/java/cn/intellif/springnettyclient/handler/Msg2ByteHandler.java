@@ -11,5 +11,6 @@ public class Msg2ByteHandler extends MessageToByteEncoder{
         String msg = (String) o;
         byte[] temps = msg.getBytes();
         byteBuf.writeBytes(temps);
+//       channelHandlerContext.writeAndFlush(temps);
     }
 }

@@ -22,6 +22,7 @@ public class RoomController {
     @RequestMapping("save")
     public Object save(){
         try {
+//            Thread.sleep(20000);
             RoomEntity entity = new RoomEntity();
             entity.setName("test"+System.currentTimeMillis());
             roomService.save(entity);

@@ -8,9 +8,11 @@ public class HandlerMsg2OutHandler extends ChannelOutboundHandlerAdapter {
 
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>进入到HandlerMsg2Out........");
-        super.write(ctx, msg, promise);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>进入到HandlerMsg2Out........:"+msg);
+        ctx.writeAndFlush(msg);
     }
+
+
 
 //    @Override
 //    public void channelActive(ChannelHandlerContext ctx) throws Exception {
