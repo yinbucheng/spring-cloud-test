@@ -49,17 +49,17 @@ public class NettyServerListener implements InitializingBean{
                         @Override
                         protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
                             ChannelPipeline pipeline = nioSocketChannel.pipeline();
-                            pipeline.addLast(new Byte2MessageHandler());
-                            pipeline.addLast(new HandlerMsg2InHandler());
-                            pipeline.addLast(new HandlerMsg3InHandler());
-                            pipeline.addFirst(new HandlerMsg2OutHandler());
-                            pipeline.addFirst(new HandlerMsg3OutHandler());
-                            pipeline.addFirst(new Msg2ByteHandler());
-//                            pipeline.addLast(new StringEncoder());
-//                            pipeline.addLast(new LineEncoder());
-//                            pipeline.addLast(new LineBasedFrameDecoder(1024));
-//                            pipeline.addLast(new StringDecoder());
-//                            pipeline.addLast(new StringLineInHandler());
+//                            pipeline.addLast(new Byte2MessageHandler());
+//                            pipeline.addLast(new HandlerMsg2InHandler());
+//                            pipeline.addLast(new HandlerMsg3InHandler());
+//                            pipeline.addFirst(new HandlerMsg2OutHandler());
+//                            pipeline.addFirst(new HandlerMsg3OutHandler());
+//                            pipeline.addFirst(new Msg2ByteHandler());
+                            pipeline.addLast(new LineBasedFrameDecoder(1024));
+                            pipeline.addLast(new StringDecoder());
+                            pipeline.addLast(new StringLineInHandler());
+                            pipeline.addFirst(new LineEncoder());
+                            pipeline.addFirst(new StringEncoder());
 
                         }
                     });
@@ -67,6 +67,7 @@ public class NettyServerListener implements InitializingBean{
             System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>服务端netty启动.............."+port);
            f.channel().closeFuture().sync();
         }catch (Exception e){
+            System.err.println("error:"+e);
             boss.shutdownGracefully();
             work.shutdownGracefully();
         }
