@@ -8,7 +8,8 @@ public class StringLineInHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("recive msg from client:"+msg);
-        Thread.sleep(Integer.MAX_VALUE);
+//        Thread.sleep(Integer.MAX_VALUE);
+        ctx.writeAndFlush("nice ");
     }
 
     @Override
